@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.addthis.metrics:reporter-config-base:3.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.addthis.metrics/reporter-config-base/3.0.0/e3ad264a64b318e9940c0239affd0d1be8b8e11c/reporter-config-base-3.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.addthis.metrics/reporter-config-base/3.0.0/ec3d872360461cb3902c358116d5dfbc5bf35872/reporter-config-base-3.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

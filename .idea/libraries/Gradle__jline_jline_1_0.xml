@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: jline:jline:1.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/jline/jline/1.0/jline-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

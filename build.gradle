@@ -1,0 +1,58 @@
+
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'jetty'
+apply plugin: 'application'
+
+applicationName = 'todocass'
+
+applicationDefaultJvmArgs = ["-Dlogback.configurationFile=etc/todosolr/logging.xml"]
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+mainClassName = "com.example.Main"
+
+dependencies {
+
+
+    compile 'com.datastax.cassandra:cassandra-driver-core:2.1.5'
+    compile 'org.apache.cassandra:cassandra-all:2.2.3'
+
+    testCompile "junit:junit:4.11"
+    testCompile "org.slf4j:slf4j-simple:[1.7,1.8)"
+
+    //logback dependencies
+    compile 'ch.qos.logback:logback-core:1.1.3'
+    compile 'ch.qos.logback:logback-classic:1.1.3'
+    compile 'org.slf4j:slf4j-api:1.7.12'
+}
+
+//Install/copy tasks
+task copyDist(type: Copy) {
+    dependsOn "installApp"
+    from "$buildDir/install/todocass"
+    into 'opt/todocass'
+}
+
+task copyLog(type: Copy) {
+    from "src/main/resources/logback.xml"
+    into "etc/todocass/"
+}
+
+
+task copyLogToImage(type: Copy) {
+    from "src/main/resources/logback.xml"
+    into "image-todo-cass/etc"
+}
+task copyDistToImage(type: Copy) {
+    dependsOn "installApp"
+    from "$buildDir/install/todocass"
+    into "$projectDir/image-todo-cass/opt/todocass"
+}
+

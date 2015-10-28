@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: com.thinkaurelius.thrift:thrift-server:0.3.5">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thinkaurelius/thrift/thrift-server/0.3.5/thrift-server-0.3.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
